@@ -1,5 +1,8 @@
 ---
-
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+const pageTitle = "about me";
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 ---
 
 <html lang="en">
@@ -7,12 +10,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>About</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <Nav />
     <section>
       <p>
         Hello, world! 👋 I'm [Your Name], your Full-Stack Web Developer guide
@@ -29,6 +30,11 @@
         being part of this incredible journey. Let's continue to write the story
         of technology together.
       </p>
+      <p>my skills are:</p>
+      <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+      </ul>
     </section>
+    <Footer />
   </body>
 </html>
