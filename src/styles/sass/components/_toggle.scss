@@ -1,0 +1,36 @@
+.toggle {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
+
+  & span {
+    transition: all 0.2s linear;
+  }
+
+  &[data-toggle="true"] {
+    & span {
+      transition: all 0.2s linear;
+    }
+    & span:nth-child(1) {
+      transform: rotateZ(45deg) translateY(10px);
+    }
+
+    & span:nth-child(2) {
+      width: 0;
+    }
+
+    & span:nth-child(3) {
+      transform: rotateZ(-45deg) translateY(-10px);
+    }
+  }
+
+  &__bar {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    z-index: 60;
+  }
+}

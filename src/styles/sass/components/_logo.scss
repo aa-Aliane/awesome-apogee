@@ -1,0 +1,12 @@
+.logo {
+  width: 6rem;
+  & svg {
+    width: 5rem;
+    height: auto;
+
+    & path {
+      fill: var(--clr-neutral-900);
+      stroke: none;
+    }
+  }
+}

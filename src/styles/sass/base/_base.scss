@@ -1,0 +1,11 @@
+body {
+  background-color: var(--clr-neutral-300);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-l);
+  font-weight: var(--fw-regular);
+  display: grid;
+}
+
+a {
+  color: var(--clr-neutral-900);
+}

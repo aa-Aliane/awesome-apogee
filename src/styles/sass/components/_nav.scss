@@ -1,0 +1,21 @@
+.nav {
+  padding: 2rem 1rem;
+  background-color: var(--clr-neutral-200);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 2rem;
+
+    &__item {
+      transition: all 0.2s linear;
+    }
+    &__item:hover {
+      opacity: 0.5;
+    }
+  }
+}
