@@ -110,7 +110,7 @@ select {
   --s6: 6rem;
   --ff-primary: "Poppins", sans-serif;
   --default-radius: 0.4rem;
-  --duration-1: 0.1s;
+  --default-duration: 0.3s;
 }
 
 .clr-primary-200 {
@@ -572,19 +572,19 @@ select {
   opacity: 0;
 }
 .nav__menu[data-toggle=false] {
-  transition: opacity 0.2s linear;
+  transition: opacity var(--default-duration) linear;
 }
 .nav__menu[data-toggle=true] {
-  transition: opacity 0.2s linear;
+  transition: opacity var(--default-duration) linear;
   opacity: 1;
 }
 .nav__menu[data-toggle=true] li {
   animation-name: slide-in;
-  animation-duration: 0.2s;
+  animation-duration: var(--default-duration);
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .nav__menu__item {
-  transition: all 0.2s linear;
+  transition: all var(--default-duration) linear;
 }
 .nav__menu__item:hover {
   opacity: 0.5;
@@ -636,10 +636,10 @@ select {
   z-index: 61;
 }
 .toggle span {
-  transition: all 0.2s linear;
+  transition: all var(--default-duration) linear;
 }
 .toggle[data-toggle=true] span {
-  transition: all 0.2s linear;
+  transition: all var(--default-duration) linear;
 }
 .toggle[data-toggle=true] span:nth-child(1) {
   transform: rotateZ(45deg) translateY(10px);

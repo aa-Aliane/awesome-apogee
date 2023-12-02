@@ -26,7 +26,7 @@
   --ff-primary: "Poppins", sans-serif;
   --default-radius: 0.4rem;
 
-  --duration-1: 0.1s;
+  --default-duration: 0.3s;
 }
 
 // colors
@@ -45,8 +45,6 @@
     }
   }
 }
-
-
 
 //   fonts sizes
 @each $key, $value in $font-sizes {

@@ -26,22 +26,22 @@
 
     opacity: 0;
     &[data-toggle="false"] {
-      transition: opacity 0.2s linear;
+      transition: opacity var(--default-duration) linear;
     }
 
     &[data-toggle="true"] {
-      transition: opacity 0.2s linear;
+      transition: opacity var(--default-duration) linear;
       opacity: 1;
 
       & li {
         animation-name: slide-in;
-        animation-duration: 0.2s;
+        animation-duration: var(--default-duration);
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
       }
     }
 
     &__item {
-      transition: all 0.2s linear;
+      transition: all var(--default-duration) linear;
     }
     &__item:hover {
       opacity: 0.5;

@@ -9,12 +9,12 @@
   z-index: 61;
 
   & span {
-    transition: all 0.2s linear;
+    transition: all var(--default-duration) linear;
   }
 
   &[data-toggle="true"] {
     & span {
-      transition: all 0.2s linear;
+      transition: all var(--default-duration) linear;
     }
     & span:nth-child(1) {
       transform: rotateZ(45deg) translateY(10px);
