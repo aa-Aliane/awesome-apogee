@@ -1,18 +1,40 @@
 .nav {
-  padding: 2rem 1rem;
   background-color: var(--clr-neutral-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
 
   &__container {
+    width: 95%;
     display: flex;
     justify-content: space-between;
   }
 
   &__menu {
-    display: flex;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-neutral-200);
+    z-index: 60;
     gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    &[data-toggle="false"] {
-      opacity: 0;
+    opacity: 0;
+
+    &[data-toggle="true"] {
+      animation: appear 0.2s ease-in-out;
+      opacity: 1;
+
+      & li {
+        animation-name: slide-in;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
     }
 
     &__item {
@@ -21,5 +43,23 @@
     &__item:hover {
       opacity: 0.5;
     }
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -6,6 +6,8 @@
   justify-content: center;
   cursor: pointer;
 
+  z-index: 61;
+
   & span {
     transition: all 0.2s linear;
   }

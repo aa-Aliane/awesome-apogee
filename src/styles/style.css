@@ -41,7 +41,6 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -547,19 +546,39 @@ select {
 }
 
 .nav {
-  padding: 2rem 1rem;
   background-color: var(--clr-neutral-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.5rem;
 }
 .nav__container {
+  width: 95%;
   display: flex;
   justify-content: space-between;
 }
 .nav__menu {
-  display: flex;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-neutral-200);
+  z-index: 60;
   gap: 2rem;
-}
-.nav__menu[data-toggle=false] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
+}
+.nav__menu[data-toggle=true] {
+  animation: appear 0.2s ease-in-out;
+  opacity: 1;
+}
+.nav__menu[data-toggle=true] li {
+  animation-name: slide-in;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .nav__menu__item {
   transition: all 0.2s linear;
@@ -568,6 +587,22 @@ select {
   opacity: 0.5;
 }
 
+@keyframes slide-in {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .logo {
   width: 6rem;
 }
@@ -587,6 +622,7 @@ select {
   gap: 5px;
   justify-content: center;
   cursor: pointer;
+  z-index: 61;
 }
 .toggle span {
   transition: all 0.2s linear;

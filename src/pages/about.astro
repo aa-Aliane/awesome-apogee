@@ -9,29 +9,28 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
   <head>
     <ViewTransitions />
   </head>
-  <body>
-    <MainLayout>
-      <section>
-        <p>
-          Hello, world! 👋 I'm [Your Name], your Full-Stack Web Developer guide
-          through the digital cosmos. Join me in this byte-sized journey of
-          coding adventures and tech musings.
-        </p>
-        <p>
-          Here, we explore the blend of front-end finesse and back-end wizardry,
-          one blog post at a time. A digital space where pixels and logic
-          converge in perfect harmony.
-        </p>
-        <p>
-          Cheers to a year of growth, challenges, and triumphs! 🎉 Thanks for
-          being part of this incredible journey. Let's continue to write the
-          story of technology together.
-        </p>
-        <p>my skills are:</p>
-        <ul>
-          {skills.map((skill) => <li>{skill}</li>)}
-        </ul>
-      </section>
-    </MainLayout>
-  </body>
+
+  <MainLayout>
+    <section>
+      <p>
+        Hello, world! 👋 I'm [Your Name], your Full-Stack Web Developer guide
+        through the digital cosmos. Join me in this byte-sized journey of coding
+        adventures and tech musings.
+      </p>
+      <p>
+        Here, we explore the blend of front-end finesse and back-end wizardry,
+        one blog post at a time. A digital space where pixels and logic converge
+        in perfect harmony.
+      </p>
+      <p>
+        Cheers to a year of growth, challenges, and triumphs! 🎉 Thanks for
+        being part of this incredible journey. Let's continue to write the story
+        of technology together.
+      </p>
+      <p>my skills are:</p>
+      <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+      </ul>
+    </section>
+  </MainLayout>
 </html>
