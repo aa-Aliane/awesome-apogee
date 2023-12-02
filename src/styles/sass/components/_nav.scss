@@ -11,6 +11,10 @@
     display: flex;
     gap: 2rem;
 
+    &[data-toggle="false"] {
+      opacity: 0;
+    }
+
     &__item {
       transition: all 0.2s linear;
     }

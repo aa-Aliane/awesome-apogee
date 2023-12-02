@@ -558,6 +558,9 @@ select {
   display: flex;
   gap: 2rem;
 }
+.nav__menu[data-toggle=false] {
+  opacity: 0;
+}
 .nav__menu__item {
   transition: all 0.2s linear;
 }
