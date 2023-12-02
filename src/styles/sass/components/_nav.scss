@@ -25,14 +25,17 @@
     align-items: center;
 
     opacity: 0;
+    &[data-toggle="false"] {
+      transition: opacity 0.2s linear;
+    }
 
     &[data-toggle="true"] {
-      animation: appear 0.2s ease-in-out;
+      transition: opacity 0.2s linear;
       opacity: 1;
 
       & li {
         animation-name: slide-in;
-        animation-duration: 0.3s;
+        animation-duration: 0.2s;
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
       }
     }
@@ -61,5 +64,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

@@ -6,13 +6,19 @@ const toggle = () => {
     <>
       <ul class="nav__menu" data-toggle={toggle}>
         <li class="nav__menu__item">
-          <a href="/">Home</a>
+          <a onClick={() => setToggle(false)} href="/">
+            Home
+          </a>
         </li>
         <li class="nav__menu__item">
-          <a href="/about/">About</a>
+          <a onClick={() => setToggle(false)} href="/about/">
+            About
+          </a>
         </li>
         <li class="nav__menu__item">
-          <a href="/blog/">Blog</a>
+          <a onClick={() => setToggle(false)} href="/blog/">
+            Blog
+          </a>
         </li>
       </ul>
       <div
