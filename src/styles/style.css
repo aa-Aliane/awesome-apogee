@@ -705,11 +705,14 @@ select {
   justify-content: center;
   align-items: flex-start;
 }
+.intro--container svg {
+  margin: 0 auto;
+}
 .intro__h2 {
   transform: translateY(-15px);
 }
 .intro__paragraph {
-  width: 30ch;
+  width: 29ch;
   line-height: 2rem;
 }
 

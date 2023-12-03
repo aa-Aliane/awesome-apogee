@@ -9,6 +9,10 @@
     gap: 1rem;
     justify-content: center;
     align-items: flex-start;
+
+    & svg {
+      margin: 0 auto;
+    }
   }
 
   &__h2 {
@@ -16,7 +20,9 @@
   }
 
   &__paragraph {
-    width: 30ch;
+    width: 29ch;
     line-height: 2rem;
   }
+
+
 }
