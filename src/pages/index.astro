@@ -1,6 +1,7 @@
 ---
+import Intro from "../components/intro.astro";
 import MainLayout from "../layouts/main-layout.astro";
-import { ViewTransitions, fade } from "astro:transitions";
+import { ViewTransitions, slide } from "astro:transitions";
 ---
 
 <html lang="en">
@@ -13,8 +14,7 @@ import { ViewTransitions, fade } from "astro:transitions";
     <ViewTransitions />
   </head>
 
-    <MainLayout>
-      <h1 transition:animate={fade({ duration: ".4s" })}>Astro</h1>
-    </MainLayout>
-
+  <MainLayout>
+    <Intro />
+  </MainLayout>
 </html>

@@ -26,7 +26,8 @@
 
     opacity: 0;
     &[data-toggle="false"] {
-      transition: opacity var(--default-duration) linear;
+      // transition: opacity var(--default-duration) linear;
+      animation: disappear var(--default-duration) linear;
     }
 
     &[data-toggle="true"] {
@@ -67,11 +68,11 @@
   }
 }
 
-@keyframes appear {
+@keyframes disappear {
   0% {
-    opacity: 1;
+    transform: translateX(0);
   }
   100% {
-    opacity: 0;
+    transform: translateX(-100%);
   }
 }
