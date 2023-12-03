@@ -4,17 +4,6 @@ import MainLayout from "../layouts/main-layout.astro";
 import { ViewTransitions, slide } from "astro:transitions";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-    <ViewTransitions />
-  </head>
-
-  <MainLayout>
-    <Intro />
-  </MainLayout>
-</html>
+<MainLayout>
+  <Intro />
+</MainLayout>

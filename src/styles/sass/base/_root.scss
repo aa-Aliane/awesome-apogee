@@ -23,7 +23,7 @@
     --s#{$key}: #{$value};
   }
 
-  --ff-primary: "Poppins", sans-serif;
+  --ff-primary: "Lato", sans-serif;
   --default-radius: 0.4rem;
 
   --default-duration: 0.3s;
@@ -93,5 +93,14 @@
   }
   .mr-#{$key} {
     margin-right: #{$value};
+  }
+}
+
+// opacity
+
+@for $i from 0 through 9 {
+  $opacity-value: $i * 0.1;
+  .opacity-#{$i} {
+    opacity: $opacity-value;
   }
 }
