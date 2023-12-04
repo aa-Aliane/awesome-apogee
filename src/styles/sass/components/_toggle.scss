@@ -36,3 +36,9 @@
     z-index: 60;
   }
 }
+
+@media screen and (min-width: 693px) {
+  .toggle {
+    display: none;
+  }
+}

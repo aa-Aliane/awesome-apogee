@@ -1,5 +1,6 @@
 .intro {
   padding-top: 5rem;
+
   &--container {
     width: 65%;
     margin: 0 auto;
@@ -24,5 +25,8 @@
     line-height: 2rem;
   }
 
-
+  & img {
+    border-radius: 10px 10px;
+    transform: translateY(2rem);
+  }
 }

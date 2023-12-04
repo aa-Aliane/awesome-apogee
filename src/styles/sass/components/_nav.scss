@@ -50,6 +50,24 @@
   }
 }
 
+@media screen and (min-width: 693px) {
+  .nav {
+    &__container {
+      width: 75%;
+    }
+    &__menu {
+      position: static;
+      flex-direction: row;
+      width: auto;
+      &[data-toggle="true"],
+      &[data-toggle="false"] {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  }
+}
+
 @keyframes slide-in {
   0% {
     transform: translateX(-500px);

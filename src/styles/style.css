@@ -626,6 +626,20 @@ select {
   opacity: 0.5;
 }
 
+@media screen and (min-width: 693px) {
+  .nav__container {
+    width: 75%;
+  }
+  .nav__menu {
+    position: static;
+    flex-direction: row;
+    width: auto;
+  }
+  .nav__menu[data-toggle=true], .nav__menu[data-toggle=false] {
+    animation: none;
+    opacity: 1;
+  }
+}
 @keyframes slide-in {
   0% {
     transform: translateX(-500px);
@@ -693,6 +707,11 @@ select {
   z-index: 60;
 }
 
+@media screen and (min-width: 693px) {
+  .toggle {
+    display: none;
+  }
+}
 .intro {
   padding-top: 5rem;
 }
@@ -714,6 +733,10 @@ select {
 .intro__paragraph {
   width: 29ch;
   line-height: 2rem;
+}
+.intro img {
+  border-radius: 10px 10px;
+  transform: translateY(2rem);
 }
 
 .main {
