@@ -38,6 +38,9 @@
     .text-#{$clr}-#{$key} {
       color: var(--clr-#{$clr}-#{$key});
     }
+    .fill-#{$clr}-#{$key} {
+      fill: var(--clr-#{$clr}-#{$key});
+    }
 
     .border-#{$clr}-#{$key} {
       box-shadow: 0 0 0.5rem 0.5rem var(--clr-#{$clr}-#{$key});
