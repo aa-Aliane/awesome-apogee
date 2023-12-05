@@ -118,7 +118,7 @@ select {
   --fs-l: 1.2rem;
   --fs-xl: 1.5rem;
   --fs-xxl: 2rem;
-  --fs-xxxl: 2.5rem;
+  --fs-xxxl: 2.6rem;
   --fw-light: 300;
   --fw-regular: 400;
   --fw-medium: 500;
@@ -780,7 +780,7 @@ select {
   /* Styling for paragraph within .intro */
 }
 .intro--container {
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
   /* Flexbox styling for layout */
   display: flex;
