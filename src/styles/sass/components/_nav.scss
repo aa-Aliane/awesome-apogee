@@ -31,6 +31,7 @@
     }
 
     &[data-toggle="true"] {
+      z-index: 62;
       transition: opacity var(--default-duration) linear;
       opacity: 1;
 

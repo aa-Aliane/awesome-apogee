@@ -641,6 +641,20 @@ select {
   opacity: 0.9;
 }
 
+.btn {
+  padding: 0.5em 2em;
+  background-color: var(--clr-primary-300);
+  color: var(--clr-neutral-100);
+  text-transform: capitalize;
+  border: 2px solid var(--clr-primary-300);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-900);
+}
+
 .nav {
   background-color: var(--clr-neutral-200);
   display: flex;
@@ -671,6 +685,7 @@ select {
   animation: disappear var(--default-duration) linear;
 }
 .nav__menu[data-toggle=true] {
+  z-index: 62;
   transition: opacity var(--default-duration) linear;
   opacity: 1;
 }
@@ -743,7 +758,7 @@ select {
   gap: 5px;
   justify-content: center;
   cursor: pointer;
-  z-index: 61;
+  z-index: 63;
 }
 .toggle span {
   transition: all var(--default-duration) linear;
@@ -764,7 +779,6 @@ select {
   width: 25px;
   height: 2px;
   background-color: black;
-  z-index: 60;
 }
 
 @media screen and (min-width: 693px) {
@@ -808,12 +822,9 @@ select {
   width: 29ch;
   line-height: 2rem;
 }
-
-svg * {
-  z-index: 2;
-}
-svg rect {
-  z-index: -2;
+.intro button {
+  margin: 0 auto;
+  z-index: 60;
 }
 
 #raindrop-0 {

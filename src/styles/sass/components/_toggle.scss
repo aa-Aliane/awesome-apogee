@@ -5,9 +5,7 @@
   gap: 5px;
   justify-content: center;
   cursor: pointer;
-
-  z-index: 61;
-
+  z-index: 63;
   & span {
     transition: all var(--default-duration) linear;
   }
@@ -33,7 +31,6 @@
     width: 25px;
     height: 2px;
     background-color: black;
-    z-index: 60;
   }
 }
 
