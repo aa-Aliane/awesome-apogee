@@ -1,12 +1,21 @@
-.logo {
-  width: 6rem;
-  & svg {
-    width: 5rem;
-    height: auto;
+#logo {
+  margin: auto;
+}
 
-    & path {
-      fill: var(--clr-neutral-900);
-      stroke: none;
-    }
+#logo path {
+  stroke: var(--clr-neutral-900);
+  fill: none;
+
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1555px;
+  animation: anim 7s linear;
+}
+
+@keyframes anim {
+  from {
+    stroke-dashoffset: 1555px;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }

@@ -1,37 +1,36 @@
 import { useState } from "react";
 
-const toggle = () => {
-  const [toggle, setToggle] = useState(false);
+const Toggle = ({ toggle, setToggle }) => {
   return (
     <>
-      <ul class="nav__menu" data-toggle={toggle}>
-        <li class="nav__menu__item">
+      <ul className="nav__menu" data-toggle={toggle}>
+        <li className="nav__menu__item">
           <a onClick={() => setToggle(false)} href="/">
             Home
           </a>
         </li>
-        <li class="nav__menu__item">
+        <li className="nav__menu__item">
           <a onClick={() => setToggle(false)} href="/about/">
             About
           </a>
         </li>
-        <li class="nav__menu__item">
+        <li className="nav__menu__item">
           <a onClick={() => setToggle(false)} href="/blog/">
             Blog
           </a>
         </li>
       </ul>
       <div
-        class="toggle"
+        className="toggle"
         data-toggle={toggle}
         onClick={() => setToggle((prevState) => !prevState)}
       >
-        <span class="toggle__bar"></span>
-        <span class="toggle__bar"></span>
-        <span class="toggle__bar"></span>
+        <span className="toggle__bar"></span>
+        <span className="toggle__bar"></span>
+        <span className="toggle__bar"></span>
       </div>
     </>
   );
 };
 
-export default toggle;
+export default Toggle;

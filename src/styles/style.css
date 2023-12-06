@@ -656,11 +656,17 @@ select {
 }
 
 .nav {
+  position: fixed;
+  z-index: 70;
+  width: 100%;
   background-color: var(--clr-neutral-200);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem 0.5rem;
+}
+.nav[data-toggle=true] {
+  position: static;
 }
 .nav__container {
   width: 95%;
@@ -673,7 +679,7 @@ select {
   width: 100%;
   height: 100%;
   background-color: var(--clr-neutral-200);
-  z-index: 60;
+  z-index: 63;
   gap: 2rem;
   display: flex;
   flex-direction: column;
@@ -704,6 +710,7 @@ select {
 @media screen and (min-width: 693px) {
   .nav__container {
     width: 75%;
+    align-items: center;
   }
   .nav__menu {
     position: static;
@@ -739,18 +746,26 @@ select {
     transform: translateX(-100%);
   }
 }
-.logo {
-  width: 6rem;
-}
-.logo svg {
-  width: 5rem;
-  height: auto;
-}
-.logo svg path {
-  fill: var(--clr-neutral-900);
-  stroke: none;
+#logo {
+  margin: auto;
 }
 
+#logo path {
+  stroke: var(--clr-neutral-900);
+  fill: none;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1555px;
+  animation: anim 7s linear;
+}
+
+@keyframes anim {
+  from {
+    stroke-dashoffset: 1555px;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 .toggle {
   width: 30px;
   display: flex;
@@ -788,7 +803,7 @@ select {
 }
 /* Styling for the .intro section */
 .intro {
-  padding: 3rem 0;
+  padding: 6rem 0;
   /* Styling for .intro--container within .intro */
   /* Styling for subheading within .intro */
   /* Styling for paragraph within .intro */
@@ -813,6 +828,7 @@ select {
   gap: 1rem;
   justify-content: center;
   align-items: flex-start;
+  z-index: 0;
 }
 .intro__h2 {
   transform: translateY(-5px);
@@ -823,7 +839,7 @@ select {
 }
 .intro button {
   margin: 0 auto;
-  z-index: 60;
+  z-index: 50;
 }
 
 .gradient-grey {
