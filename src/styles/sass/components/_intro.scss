@@ -10,9 +10,9 @@
     /* Flexbox styling for layout */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 
     /* Styling for SVG within .intro--container */
     & svg {
@@ -46,7 +46,11 @@
   }
 }
 
-@for $i from 0 through 11 {
+.gradient-grey {
+  fill: linear-gradient(to bottom, white, rgb(255, 253, 253));
+}
+
+@for $i from 0 through 19 {
   #raindrop-#{$i} {
     animation-name: drop-2;
     animation-delay: calc(0.1s * $i);
@@ -59,19 +63,19 @@
 @for $i from 1 through 11 {
   @keyframes drop-#{$i} {
     0% {
-      transform: translateY(-5%);
+      transform: translateY(-4%);
       opacity: 0;
     }
     50% {
-      transform: translateY(-5%);
+      transform: translateY(-4%);
       opacity: 1;
     }
     60% {
-      transform: translateY(3%);
+      transform: translateY(2%);
       opacity: 1;
     }
     100% {
-      transform: translateY(3%);
+      transform: translateY(2%);
       opacity: 0;
     }
   }
