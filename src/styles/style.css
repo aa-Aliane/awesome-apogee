@@ -672,13 +672,13 @@ select {
   width: 95%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .nav__menu {
   position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--clr-neutral-200);
   z-index: 63;
   gap: 2rem;
   display: flex;
@@ -746,8 +746,9 @@ select {
     transform: translateX(-100%);
   }
 }
-#logo {
-  margin: auto;
+.logo {
+  display: flex;
+  align-items: center;
 }
 
 #logo path {

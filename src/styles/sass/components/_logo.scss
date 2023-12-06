@@ -1,6 +1,9 @@
-#logo {
-  margin: auto;
+.logo {
+  display: flex;
+  align-items: center;
 }
+
+
 
 #logo path {
   stroke: var(--clr-neutral-900);
