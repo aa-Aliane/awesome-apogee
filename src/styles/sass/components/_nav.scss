@@ -2,18 +2,20 @@
   position: fixed;
   z-index: 70;
   width: 100%;
+  height: 4rem;
   background-color: var(--clr-neutral-200);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0.5rem;
+  padding: auto 0.5rem;
 
   &[data-toggle="true"] {
-    position: static;
+    position: inherit;
   }
 
   &__container {
     width: 95%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,9 +24,11 @@
   &__menu {
     position: absolute;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     z-index: 63;
+    background-color: var(--clr-neutral-200);
     gap: 2rem;
     display: flex;
     flex-direction: column;
