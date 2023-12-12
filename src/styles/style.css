@@ -108,12 +108,16 @@ select {
 :root {
   --clr-primary-300: #007ee6;
   --clr-primary-700: #0c346a;
-  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-100: hsl(0, 100%, 100%);
   --clr-neutral-200: hsl(0, 0%, 95%);
   --clr-neutral-500: hsl(0, 0%, 50%);
   --clr-neutral-700: hsl(0, 0%, 25%);
   --clr-neutral-800: #333333;
   --clr-neutral-900: #030303;
+  --tag-1: hsl(80, 50%, 37%);
+  --tag-2: hsl(219, 87%, 24%);
+  --tag-3: hsl(359, 80%, 48%);
+  --tag-4: hsl(62, 100%, 69%);
   --fs-s: 0.8rem;
   --fs-m: 1rem;
   --fs-l: 1.2rem;
@@ -678,6 +682,66 @@ select {
 }
 .blog__posts__post:hover {
   box-shadow: var(--clr-neutral-200) 0px 1px 3px 0px, var(--clr-neutral-500) 0px 0px 0px 1px;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.post__tags {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.post__tag {
+  border: 1px solid var(--clr-neutral-900);
+  border-radius: 2px;
+  padding: 0.5rem 1em;
+  font-weight: var(--fw-bold);
+}
+.post__tag[data-language=python] {
+  background-color: var(--tag-1);
+  color: var(--clr-neutral-100);
+}
+.post__tag[data-language=nlp] {
+  background-color: var(--tag-2);
+  color: var(--clr-neutral-100);
+}
+.post__tag[data-language=pytorch] {
+  background-color: var(--tag-3);
+  color: var(--clr-neutral-100);
+}
+.post__tag[data-language=python] {
+  background-color: var(--tag-1);
+  color: var(--clr-neutral-100);
+}
+.post__title {
+  margin: 0 auto;
+  margin-top: 2rem;
+  max-width: 40ch;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.post__pubdate {
+  margin: 0 auto;
+  max-width: 40ch;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.post__description {
+  max-width: 95%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.post__author {
+  margin: 0 auto;
+  max-width: 40ch;
+  text-align: center;
+  margin-bottom: 5rem;
 }
 
 .btn {

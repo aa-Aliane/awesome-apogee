@@ -8,6 +8,11 @@
     }
   }
 
+  // tags
+  @each $key, $value in $tags {
+    --tag-#{$key}: #{$value};
+  }
+
   //   fonts sizes
   @each $key, $value in $font-sizes {
     --fs-#{$key}: #{$value};

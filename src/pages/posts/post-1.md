@@ -1,18 +1,16 @@
 ---
+layout: "../../layouts/blog-post-layout.astro"
 title: "Unveiling the Magic of SentencePiece (BPE) in NLP"
 pubDate: 2023-11-30
 description: "Dive into the world of SentencePiece (BPE) and its transformative role in Natural Language Processing."
-author: "NLP Explorer"
+author: "A.Amine Aliane"
 image:
-  url: "https://your-image-url.com"
+  url: "../assets/letter.jpg"
   alt: "Image description for your blog post"
-tags: ["NLP", "SentencePiece", "Machine Learning"]
+tags: ["python", "nlp", "pytorch", javascript]
 ---
 
-# Unveiling the Magic of SentencePiece (BPE) in NLP
-
-Published on: 2023-11-30
-
+![letters](../../assets/letters.jpg)
 Welcome to my latest blog post where we embark on a journey into the realm of Natural Language Processing (NLP) and explore the enchanting world of SentencePiece, specifically focusing on Byte Pair Encoding (BPE).
 
 ## Understanding SentencePiece

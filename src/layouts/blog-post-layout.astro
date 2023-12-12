@@ -1,0 +1,28 @@
+---
+import MainLayout from "./main-layout.astro";
+import imm from "../assets/letters.jpg";
+import { Image } from "astro:assets";
+const { frontmatter } = Astro.props;
+---
+
+<MainLayout pageTitle={frontmatter.title}>
+  <div class="post">
+    <ul class="post__tags">
+      {
+        frontmatter.tags.map((tag) => (
+          <li class="post__tag" data-language={tag}>
+            {tag}
+          </li>
+        ))
+      }
+    </ul>
+    <h4 class="post__title">{frontmatter.title}</h4>
+
+    <p class="post__pubdate">
+      Published on: {frontmatter.pubDate.slice(0, 10)}
+    </p>
+    <p class="post__description"><em>{frontmatter.description}</em></p>
+    <p>Written by: <span class="fw-bold">{frontmatter.author}</span></p>
+    <Image src="/letters.jpg" alt={frontmatter.image.alt} />
+  </div>
+</MainLayout>
