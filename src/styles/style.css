@@ -847,7 +847,6 @@ select {
 }
 /* Styling for the .intro section */
 .intro {
-  padding: 6rem 0;
   /* Styling for .intro--container within .intro */
   /* Styling for subheading within .intro */
   /* Styling for paragraph within .intro */
@@ -1324,6 +1323,7 @@ select {
 
 .main {
   min-height: 80vh;
+  margin-top: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */
